@@ -14,27 +14,6 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS personal (
     bonus INT
 )''')
 
-#baza = [(1,'Ivan','Ivanov','head ingenier',50000,10000),
-        #(2,'Igor','Semenov','ingenier',20000,8000),
-        #(3,'Oleg','Petrov','zavhoz',12000,3000)]
-
-#try:
-    #cursor.executemany('INSERT INTO personal VALUES(?,?,?,?,?,?)',baza)
-    #bd.commit()
-#except:
-    #print('Data is exist')
-#for i in cursor.execute('SELECT * FROM personal'):
-    #print(*i)
-
-#cursor.execute('SELECT * from personal WHERE name LIKE "Oleg";')
-#one = cursor.fetchmany()
-#print(*one)
-#cursor.execute('SELECT * from personal WHERE id=2;')
-#one = cursor.fetchone()
-#print(*one)
-
-#cursor.execute("DELETE FROM users WHERE lname='Parker';") example of deleting
-#bd.commit()
 
 def preview_base():
     list_dt = []
@@ -80,7 +59,3 @@ def selective_view():
     for i in cursor.execute(query):
         list_dt.append(i)
     return list_dt
-
-
-
-#cursor.execute('UPDATE personal SET salary = 55000 WHERE id=2')
